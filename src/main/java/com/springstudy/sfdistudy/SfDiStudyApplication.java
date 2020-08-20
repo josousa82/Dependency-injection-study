@@ -16,8 +16,8 @@ public class SfDiStudyApplication {
 
         MyController myController = (MyController)ctx.getBean("myController");
 
-        String greeting = myController.sayHello();
-        System.out.println("greeting = " + greeting);
+        System.out.println("---------- Primary Bean");
+        System.out.println("greeting Primary Bean = " + myController.sayHello());
 
         System.out.println("----------Property");
 

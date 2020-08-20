@@ -1,5 +1,6 @@
 package com.springstudy.sfdistudy.controllers;
 
+import com.springstudy.sfdistudy.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -9,9 +10,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
+    private final GreetingService greetingService;
+
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
     public String sayHello(){
-        System.out.println("Hello Worlds!!");
-        return "Hi folks!!";
+        return "Hi folks!! -- From the Primary Bean";
     }
 
 }
