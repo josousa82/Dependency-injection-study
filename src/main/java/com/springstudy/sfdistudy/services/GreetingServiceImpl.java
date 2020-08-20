@@ -1,0 +1,12 @@
+package com.springstudy.sfdistudy.services;
+
+/**
+ * Created by sousaJ on 20/08/2020
+ * in package - com.springstudy.sfdistudy.services
+ **/
+public class GreetingServiceImpl implements GreetingService{
+    @Override
+    public String sayGreeting() {
+        return "Hello world";
+    }
+}
