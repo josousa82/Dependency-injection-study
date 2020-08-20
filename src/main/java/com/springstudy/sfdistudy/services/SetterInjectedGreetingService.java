@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service;
  * in package - com.springstudy.sfdistudy.services
  **/
 @Service
-public class GreetingServiceImpl implements GreetingService{
+public class SetterInjectedGreetingService implements GreetingService{
+
     @Override
     public String sayGreeting() {
-        return "Hello world";
+        return "Hello World - Setter";
     }
 }
