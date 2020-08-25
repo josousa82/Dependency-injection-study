@@ -1,6 +1,6 @@
 package com.springstudy.sfdistudy.controllers;
 
-import com.springstudy.sfdistudy.services.GreetingServiceImpl;
+import com.springstudy.sfdistudy.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +15,7 @@ public class SetterInjectControllerTest {
     @BeforeEach
     public void setUp(){
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
