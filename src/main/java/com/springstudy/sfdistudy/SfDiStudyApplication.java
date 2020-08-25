@@ -1,9 +1,6 @@
 package com.springstudy.sfdistudy;
 
-import com.springstudy.sfdistudy.controllers.ConstructorInjectedController;
-import com.springstudy.sfdistudy.controllers.MyController;
-import com.springstudy.sfdistudy.controllers.PropertyInjectedController;
-import com.springstudy.sfdistudy.controllers.SetterInjectedController;
+import com.springstudy.sfdistudy.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,8 +13,12 @@ public class SfDiStudyApplication {
 
         MyController myController = (MyController)ctx.getBean("myController");
 
-        String greeting = myController.sayHello();
-        System.out.println("greeting = " + greeting);
+        System.out.println("---------- Profile study");
+        I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+        System.out.println("i18NController.sayHello() = " + i18NController.sayHello());
+
+        System.out.println("---------- Primary Bean");
+        System.out.println("greeting Primary Bean = " + myController.sayHello());
 
         System.out.println("----------Property");
 
