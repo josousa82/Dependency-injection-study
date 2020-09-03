@@ -1,6 +1,8 @@
 package com.springstudy.sfdistudy.services;
 
+import com.springstudy.sfdistudy.repositories.GreetingRepository;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,9 +17,17 @@ import org.springframework.stereotype.Service;
 
 @Primary
 @Service
+@Profile({"EN", "default"})
 public class PrimaryGreetingService implements GreetingService{
+
+    private GreetingRepository greetingRepository;
+
+    public PrimaryGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
     @Override
     public String sayGreeting() {
-        return "Hello World - From the PRIMARY Bean";
+        return greetingRepository.getEnglishGreeting();
     }
 }
