@@ -15,9 +15,7 @@ import org.springframework.stereotype.Service;
 // doesn't have the @Qualifier annotation defining which service should be injected
 // so the Bean that will be injected is the one defined as default, set as @Primary
 
-@Primary
-@Service
-@Profile({"EN", "default"})
+
 public class PrimaryGreetingService implements GreetingService{
 
     private GreetingRepository greetingRepository;
