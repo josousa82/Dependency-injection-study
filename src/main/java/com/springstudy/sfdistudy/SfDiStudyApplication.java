@@ -14,8 +14,8 @@ public class SfDiStudyApplication {
         MyController myController = (MyController)ctx.getBean("myController");
 
         System.out.println("---------- Profile study");
-        I18NController i18NController = (I18NController) ctx.getBean("i18NController");
-        System.out.println("i18NController.sayHello() = " + i18NController.sayHello());
+////        I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+//        System.out.println("i18NController.sayHello() = " + i18NController.sayHello());
 
         System.out.println("---------- Primary Bean");
         System.out.println("greeting Primary Bean = " + myController.sayHello());
