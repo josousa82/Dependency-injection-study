@@ -18,7 +18,7 @@ public class PropertyInjectedController {
         @Qualifier("greetingServiceImpl")
         public GreetingService greetingServiceIlm;
 
-        public String getGreeting(){
+        public String sayHello(){
             return greetingServiceIlm.sayGreeting();
         }
 }

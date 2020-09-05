@@ -1,6 +1,7 @@
 package com.springstudy.sfdistudy.controllers;
 
 import com.springstudy.sfdistudy.services.GreetingService;
+import com.springstudy.sfdistudy.services.GreetingServiceImpl;
 import org.springframework.stereotype.Controller;
 
 
@@ -14,7 +15,7 @@ public class MyController {
 
     private final GreetingService greetingService;
 
-    public MyController(GreetingService greetingService) {
+    public MyController(GreetingServiceImpl greetingService) {
         this.greetingService = greetingService;
     }
 
