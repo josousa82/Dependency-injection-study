@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 public class GreetingServiceFactory {
 
-    private final GreetingRepository greetingRepository;
+    private GreetingRepository greetingRepository;
 
     public GreetingServiceFactory(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;

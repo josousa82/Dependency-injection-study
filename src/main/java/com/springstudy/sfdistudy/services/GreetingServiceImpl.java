@@ -14,7 +14,4 @@ public class GreetingServiceImpl implements GreetingService{
     public String sayGreeting() {
         return HELLO_GURUS;
     }
-
-
-
 }

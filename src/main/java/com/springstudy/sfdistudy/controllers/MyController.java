@@ -1,8 +1,9 @@
 package com.springstudy.sfdistudy.controllers;
 
 import com.springstudy.sfdistudy.services.GreetingService;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.springstudy.sfdistudy.services.GreetingServiceImpl;
 import org.springframework.stereotype.Controller;
+
 
 /**
  * Created by sousaJ on 20/08/2020
@@ -11,14 +12,16 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
+
     private final GreetingService greetingService;
 
-    public MyController(@Qualifier("primaryGreetingService") GreetingService greetingService) {
+    public MyController(GreetingServiceImpl greetingService) {
         this.greetingService = greetingService;
     }
 
-    public String sayHello(){
-        return "Hi folks!! -- From the Primary Bean";
+    public String hello(){
+        System.out.println("Hello!!!");
+        return greetingService.sayGreeting();
     }
 
 }

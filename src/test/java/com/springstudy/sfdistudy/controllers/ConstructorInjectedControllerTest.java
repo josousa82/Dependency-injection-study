@@ -10,16 +10,6 @@ import org.junit.jupiter.api.Test;
  **/
 public class ConstructorInjectedControllerTest {
 
-    ConstructorInjectedController controller;
 
-    @BeforeEach
-    void setUp(){
-        controller = new ConstructorInjectedController(new ConstructorGreetingService());
-    }
-
-    @Test
-    public void getGreetingTest(){
-        System.out.println(controller.getGreeting());
-    }
 
 }
