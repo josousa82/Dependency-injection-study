@@ -1,6 +1,5 @@
 package com.springstudy.sfdistudy.controllers;
 
-
 import com.springstudy.sfdistudy.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,13 +11,16 @@ import org.springframework.stereotype.Controller;
  **/
 
 @Controller
-public class PropertyInjectedController {
+public class GetterInjectedController {
 
-        @Autowired
-        @Qualifier("greetingServiceImpl")
-        public GreetingService greetingServiceIlm;
+    private GreetingService greetingService;
 
-        public String getGreeting(){
-            return greetingServiceIlm.sayGreeting();
-        }
+    public String sayHello(){
+        return greetingService.sayGreeting();
+    }
+
+    @Autowired
+    public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService){
+        this.greetingService = greetingService;
+    }
 }
